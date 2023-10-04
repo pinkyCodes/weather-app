@@ -1,27 +1,50 @@
-# React + TypeScript + Vite
+# Sky Symphony
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+<div align="center" display='flex' > 
+<img width='100px' src="src/assets/singing-in-the-rain.png" alt="Gene Kelly Singing In The Rain Silhouette" title="Weather App Icon"/> 
+</div>
 
-Currently, two official plugins are available:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Embrace the rhythm of nature – listen to the sky's symphony and dance with the elements!
 
-## Expanding the ESLint configuration
+Step into the world of weather like never before with our enchanting app. Immerse yourself in the celestial symphony, where each gust of wind,  raindrop, and sun ray choreograph a unique performance just for you. Feel the atmospheric dance and let our app be your guide through the ever-changing weather ballet. Uncover the melodies of temperature, precipitation, and sunshine, all harmonized for a delightful forecast experience.
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+## Main Technologies Used
 
-- Configure the top-level `parserOptions` property like this:
+<div align="center">
+	<code><img width="70" src="https://user-images.githubusercontent.com/25181517/183890598-19a0ac2d-e88a-4005-a8df-1ee36782fde1.png" alt="TypeScript" title="TypeScript"/></code>
+	<code><img width="70" src="https://user-images.githubusercontent.com/25181517/183897015-94a058a6-b86e-4e42-a37f-bf92061753e5.png" alt="React" title="React"/></code>
+   <code><img width="70" src="src/assets/react-bootstrap-logo.png" alt="React Bootstrap" title="React Bootstrap"/></code>
+	<code><img width="70" src="https://user-images.githubusercontent.com/25181517/192158954-f88b5814-d510-4564-b285-dff7d6400dad.png" alt="HTML" title="HTML"/></code>
+	<code><img width="70" src="https://user-images.githubusercontent.com/25181517/183898674-75a4a1b1-f960-4ea9-abcb-637170a00a75.png" alt="CSS" title="CSS"/></code>
+</div>
 
-```js
-   parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-   },
+<!-- ### EXTRA TECHNOLOGIES -->
+
+<!-- Maybe... x)
+-   Redux - For state management
+-   Moment.js - For date & time handling and conversion -->
+
+### Run the project locally
+
+Clone the project
+
+```bash
+  git clone [link]
 ```
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+Install dependencies
+
+```bash
+  npm install
+```
+
+Start the server
+
+```bash
+  npm run dev
+```
+
+### Attributions
+
+-   <a href="https://www.clipartmax.com/middle/m2H7Z5A0K9Z5m2m2_gene-kelly-singing-in-the-rain-silhouette-gene-kelly-singing-in-the/">Gene Kelly Singing in the Rain Image</a> on <a href="https://www.clipartmax.com/">Clipartmax</a>
