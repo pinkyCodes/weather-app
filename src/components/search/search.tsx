@@ -1,24 +1,20 @@
+import Button from 'react-bootstrap/Button';
+import Container from 'react-bootstrap/Container';
 import Form from 'react-bootstrap/Form';
-// import Button from 'react-bootstrap/Button';
-import Row from 'react-bootstrap/Row';
-import Col from 'react-bootstrap/Col';
 
 const Search = () => {
     return (
-        <Form>
-            <Row>
-                <Col xs="auto">
-                    <Form.Control
-                        type="text"
-                        placeholder="Search"
-                        className="mr-sm-2"
-                    />
-                </Col>
-                {/* <Col xs="auto">
-            <Button type="submit">Submit</Button>
-        </Col> */}
-            </Row>
-        </Form>
+        <Container fluid>
+            <Form className='d-flex'>
+                <Form.Control
+                    type="search"
+                    placeholder="Search Location"
+                    className="me-2"
+                    aria-label="Search"
+                />
+                <Button variant="outline-success">Search</Button>
+            </Form>
+        </Container>
     )
 }
 
