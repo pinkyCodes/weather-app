@@ -2,25 +2,42 @@ import { useEffect, useState } from 'react';
 import Button from 'react-bootstrap/Button';
 import Container from 'react-bootstrap/Container';
 import Form from 'react-bootstrap/Form';
-import { fetchCoordinatesByCity } from '../../services/weather-service';
+import { fetchCoordinatesByCity, fetchCityWeatherByCoordinates } from '../../services/weather-service';
 
 const Search = () => {
     const [coordinates, setCoordinates] = useState(null);
+    const [weather, setWeather] = useState(null);
 
     useEffect(() => {
-        const fetchData = async () => {
+        const fetchCoordinates = async () => {
             try {
                 const result = await fetchCoordinatesByCity('Sofia');
                 setCoordinates(result);
             } catch (error) {
-                console.error('Error from Search component:', error);
+                console.error('Error from Search component (fetchCoordinates):', error);
             }
         };
 
-        fetchData();
+        fetchCoordinates();
     }, []);
 
-    console.log(coordinates);
+    useEffect(() => {
+        const fetchWeather = async () => {
+            try {
+                if (coordinates) {
+                    const result = await fetchCityWeatherByCoordinates(coordinates[0], coordinates[1]);
+                    setWeather(result);
+                }
+            } catch (error) {
+                console.error('Error from Search component (fetchWeather):', error);
+            }
+        };
+
+        fetchWeather();
+    }, [coordinates]);
+
+    console.log('From Search component (coordinates):', coordinates);
+    console.log('From Search component (weather):', weather);
 
     return (
         <Container fluid>
